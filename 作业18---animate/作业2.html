@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+	</head>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			margin: 0 auto;
+		}
+	</style>
+	<body>
+		<div><img src="img/pic.gif"></div>
+		<script>
+			$("img").eq(0).click(function(){
+				$("img").eq(0).css("border","solid 1px blue")
+			})
+		</script>	
+	
+	</body>
+</html>

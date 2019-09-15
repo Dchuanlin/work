@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var a=parseInt(prompt("请输入第一个数字"));
+			var b=prompt("请输入运算符");
+			var c=parseInt(prompt("请输入第二个数字"));
+			function r(a,b,c){
+					if(b=="+"){
+						return a+c;
+					}else if(b=="-"){
+						return a-c;
+					}else if(b=="*"){
+						return a*c;
+					}else if(b=="/"){
+						return a/c;
+					}
+				}
+			var d=r(a,b,c);
+			document.write(d);
+		</script>
+	</body>
+</html>

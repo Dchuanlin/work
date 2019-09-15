@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var a="border-left-color";
+			var b=a.split("-");		//这里的b是一个字符串
+			
+			b[1]=b[1].replace("l",b[1].charAt(0).toUpperCase());
+			b[2]=b[2].replace("c",b[2].charAt(0).toUpperCase());
+			console.log(b[0]+b[1]+b[2]);
+			
+//			var q=b[0];
+//			var c=b[1];
+//			var e=b[2];
+//			var w=c.replace("l",c.charAt(0).toUpperCase());
+//			var r=e.replace("c",e.charAt(0).toUpperCase());
+//			console.log(q+w+r);
+		</script>
+	</body>
+</html>

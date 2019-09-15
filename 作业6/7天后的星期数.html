@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//7天后的星期
+			//创建一个时间
+			var dates = new Date();
+			var m = dates.getMonth()+1;//月
+			var d = dates.getDate();//日
+			var y = dates.getFullYear();//年
+			if(m == 1 || m == 3 || m ==5 || m==7 || m==8 || m==10 || m==12){
+			  	if(d+7>31){
+			  		m = m +1;
+			  		d = (d+7)-31;//7天后的号数   
+			  	}else{
+			  		d = d+7;//7天后的号数  
+			  	}
+			  }else if(m == 4 || m == 6 || m==9 || m==11){
+			  	if(d+7>30){
+			  		m = m +1;
+			  		d = (d+7)-30;//7天后的号数  
+			  	}else{
+			  		d = d+7;//7天后的号数  
+			  	}
+			  }else {
+			  	if(d+7>28){
+			  		m = m +1;
+			  		d = (d+7)-28;//7天后的号数  
+			  	}else{
+			  		d = d+7;//7天后的号数 
+			  	}
+			  }
+			  var dates2 = new Date(m+" "+d+","+y);			
+			  switch(dates2.getDay()){
+				case 0:
+					document.write("星期天")
+				break;
+				case 1:
+					document.write("星期一")
+				break;
+				case 2:
+					document.write("星期二")
+				break;
+				case 3:
+					document.write("星期三")
+				break;
+				case 4:
+					document.write("星期四")
+				break;
+				case 5:
+					document.write("星期五")
+				break;
+				case 6:
+					document.write("星期六")
+				break;
+				
+			}
+			
+			  
+		</script>
+	</body>
+</html>

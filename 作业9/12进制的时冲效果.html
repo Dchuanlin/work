@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>您好，欢迎访问贵美商城</div>
+		<div></div>
+		<script>
+			setInterval(function(){
+				var datess=new Date();
+				var m=datess.getFullYear();
+				var d=datess.getMonth()+1;
+				var n=datess.getDate();
+				var a=datess.getDay();
+				var b=datess.getHours();	//小时
+				
+				//分钟
+				var c=datess.getMinutes();
+				if(c<10){
+					c="0"+c;
+				}
+		
+				//秒
+				var e=datess.getSeconds();
+				if(e<10){
+					e="0"+e;
+				}
+				
+				//上午AM、下午PM
+				var j;
+				if(b>12){
+					j="PM";
+				}else if(b<=12){
+					j="AM";
+				}
+				
+				//小时
+				if(b>12){
+					b=b-12;
+				}else{
+					b=b;
+				}
+				
+				
+				//星期
+				switch (a){
+					case 0:
+						a="星期天";		//当a=0时就将星期天赋值给a  这种方法不错
+						break;
+					case 1:
+						a="星期一";
+						break;
+					case 2:
+						a="星期二";
+						break;
+					case 3:
+						a="星期三";
+						break;
+					case 4:
+						a="星期四";
+						break;
+					case 5:
+						a="星期五";
+						break;
+					case 6:
+						a="星期六";
+						break;
+					
+					default:
+						a="出错";
+						break;
+				}
+				
+				document.getElementsByTagName("div")[1].innerHTML=m+"年"+d+"月"+n+"日"+"&nbsp;&nbsp;"+b+":"+c+":"+e+"&nbsp;&nbsp;"+j+"&nbsp;&nbsp;"+a;
+				
+			},10);		
+		</script>
+	</body>
+</html>

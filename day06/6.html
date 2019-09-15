@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.f1{
+			width: 1300px;
+			height: 2150px;
+			margin: 0 auto;
+			/*border: solid 1px #f4f5f7;*/
+		}
+		.f2{
+			width: 1300px;
+			height:40px;
+			background-color: #545652;
+			text-indent: 150px;
+			line-height: 40px;
+			color: white;
+			float: left;
+		}
+		.f3{
+			width: 1300px;
+			height: 90px;
+			border: solid 1px #f4f5f7;
+				overflow: hidden;
+				float: left;
+				position: relative;
+			}
+		.f9{
+			width: 200px;
+			height: 60px;
+			padding-left: 150px;
+			padding-top: 25px;
+				overflow: hidden;
+			
+		}
+		/*.f10{
+			width: 400px;
+			height: 90px;
+			display: inline-block;
+		}*/
+		.f4{
+			width: 1300px;
+			height: 607px;
+			float: left;
+		}
+		.f5{
+			width: 260px;
+			height: 600px;
+			
+			margin-left: 150px;
+			float: left;
+		}
+		.f6{
+			height: 604px;
+			width: 666px;
+				/*border: solid 1px black;*/
+				float: left;
+		}
+		.f7{
+			width: 224px;
+			height: 610px;
+			/*border: solid 1px #f4f5f7;*/
+			float: left;
+		}
+		.f12{
+			width: 260px;
+			height: 40px;
+			/*border: solid 1px black;*/
+			color: white;
+			background-color: red;
+			line-height: 40px;
+			text-align: center;
+		}
+		.f13{
+			width: 260px;
+			height:52.4px;
+			/*border: solid 1px black;*/
+			text-indent: 20px;
+			padding-top: 10px;
+			background-color: #f0f0f0;
+		}
+		.f20{
+			width: 260px;
+			height:52.4px;
+			/*border: solid 1px black;*/
+			text-indent: 20px;
+			padding-top: 10px;
+			background-color:white;
+		}
+		.f21{
+			width: 224px;
+			height: 300px;
+			background-color: red;
+			float: left;
+			/*overflow: hidden;*/
+		}
+		.f22{
+			width: 200px;
+			height: 150px;
+			background-color: white;
+		
+			margin-left: 12px;
+		}
+		.f14,.f15,.f16,.f17,.f18,.f19{
+			float: left;
+		}
+		.f14{
+			width: 666px;
+			height: 300px;
+			position: relative;
+			
+		}
+		span{
+			padding-left: 20px;
+		}
+		.f23{
+			width: 165px;
+			height: 50px;
+			font-size: 20px;
+			font-weight: 700px;
+			line-height: 50px;
+			margin-left: 20px;
+			/*margin-top: 20px;*/
+			/*padding-top: 10px;*/
+			/*text-indent: 20px;*/
+			border-bottom:solid 5px red;
+		}
+		.f24{
+			text-align: center;
+		}
+		.f25{
+			text-indent: 20px;
+		}
+		.f26{
+			width: 200px;
+			height: 120px;
+			border-top: solid 1px darkgoldenrod;
+			margin-left: 15px;
+			margin-top: 20px;
+			padding-top: 15px;
+			
+		
+		}
+		.f27{
+			font-size: 18px;
+			font-weight: 500;
+			color: white;
+			line-height: 30px;
+			
+		}
+		.f28{
+			font-size: 13px;
+			font-weight: 500;
+			line-height: 25px;
+			color: white;
+			
+		}
+		.f29{
+			width: 224px;
+			height: 300px;
+			margin-left: -16px;
+			margin-top: 10px;
+			color: black;
+			/*border: solid 1px black;*/
+			float: left;
+		}
+		.f30{
+			width: 224px;
+			height: 150px;
+			/*border: solid 1px black;*/
+			float: left;
+		}
+		.f31{
+			width: 194px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 18px;
+			font-weight: 500;
+			margin-left: 15px;
+			/*border: solid 1px black;*/
+			margin-top: 10px;
+			float: left;
+		}
+		.f32{
+			width: 194px;
+			height: 91px;
+			font-size: 15px;
+			margin-left: 15px;
+			/*border: solid 1px black;*/
+			margin-top: 3px;
+			padding-top: 5px;
+			float: left;
+		}
+		.f33{
+			width: 194px;
+			height: 30px;
+			line-height: 30px;
+			word-spacing: 40px;
+			
+		}
+		.f34{
+			width: 224px;
+			height: 150px;
+			float: left;
+			/*border: solid 1px black;*/
+			float: left;
+		}
+		.f36{
+			margin-left: 10px;
+			float: left;
+		}
+		.f37{
+			width: 1300px;
+			height: 50px;
+			line-height: 60px;
+			border-bottom: solid 1px red;
+			margin-left: -1092px;
+			text-indent: 130px;
+			padding-top: 30px;
+			float: left;
+		}
+		.f38{
+			color: red;
+			font-size: 20px;
+		}
+		.f39{
+			color: red;
+			font-size: 15px;
+		}
+		.f8{
+			width: 1300px;
+			height: 1200px;
+			float:left;
+			margin-left: -1092px;
+			text-indent: 150px;
+			/*border: solid 1px red;*/
+			float:left;
+		}
+		.f40,.f46,.f50{
+			float:left ;
+			width: 240px;
+			height: 350px;
+			border: solid 1px #f4f5f7;
+			margin-left:165px;
+			margin-top: 40px;
+			float:left;
+		}
+		.f43,.f47,.f51{
+			float:left ;
+			width: 240px;
+			height: 350px;
+			border: solid 1px #f4f5f7;
+			margin-left:50px;
+			margin-top: 40px;
+			float:left;
+		}
+		.f44,.f48,.f52{
+			float:left ;
+			width: 240px;
+			height: 350px;
+			border: solid 1px #f4f5f7;
+			margin-left:50px;
+			margin-top: 40px;
+			float:left;
+		}
+		.f45,.f49,.f53{
+			float:left ;
+			width: 240px;
+			height: 350px;
+			border: solid 1px #f4f5f7;
+			margin-left:50px;
+			margin-top: 40px;
+			float:left;
+		}
+		.f41{
+			float: left;
+			margin-left: 18px;
+		}
+		.f42{
+			/*width: 240px;
+			height: 20px;*/
+			color: black;
+			font-size: 10px;
+			line-height:20px;
+			text-indent: -10px;
+			padding-left: -5px;
+			/*border: solid 1px red;*/
+			float: left;
+		}
+		
+			.f54{
+				width: 1300px;
+				height:100px;
+			
+				margin-top: 1600px;
+				margin-left: -1092px;
+			}
+			ul{
+				text-align: center;
+				padding-top: 15px;
+			}
+			li{
+				display: inline-block;
+				font-size: 10px;
+				word-spacing: 50px;
+				border-right: solid 1px black;
+				color: black;
+				width: 100px;
+				height: 0px;
+				padding-bottom: 30px;
+				
+			}
+			.f55{
+				text-align: center;
+				padding-top: 8px;
+				color: black;
+				font-size: 10px;
+			}
+			.f56{
+				text-align: center;
+				color: black;
+				font-size: 10px;
+			}
+			.f57,.f58,.f59,.f60{
+				color: white;
+				/*border: #000000 solid 1px ;*/
+			}
+			 .f57,.f58,.f58,.f59,.f60{
+				display: block;
+				width: 130px;
+				height: 25px;
+				line-height: 25px;
+				text-align: center;
+				text-indent: -20px;
+			}
+			
+			.f57{
+				
+				position: absolute;
+				bottom: 0px;
+				left: 25px;
+				background-color: red;
+				display: block;
+			}
+			.f58{
+				background-color: darkslategray;
+				position: absolute;
+				bottom: 0px;
+				left: 180px;
+			}
+			.f59{
+				
+				position: absolute;
+				bottom: 0px;
+				left: 335px;
+				background-color: darkslategray;
+			}
+			.f60{
+				
+				position: absolute;
+				bottom: 0px;
+				left: 490px;
+				background-color: darkslategray;
+			}
+	
+	</style>
+	<body>
+		<div class="f1">
+			<div class="f2">赚彩贝 &nbsp;&nbsp;&nbsp;   花彩贝</div>
+			
+			<div class="f3">
+				<div class="f9"><img src="img/logo_170x46.png"/></div>
+				<!--<div class="f10"><img src="img/header.png"/></div>-->
+				<!--<div class="f11"><img src="img/iconsB.png"/></div>-->
+			</div>
+			
+			<div class="f4">
+				
+				<div class="f5">
+					<div class="f12"><strong>购物返彩贝商家</strong> </div>
+					<div class="f13"><strong>数码家电 </strong> <br/><span>京东 易迅 苏宁易购</span></div>
+					<div class="f20"><strong>食品酒水</strong> <br/><span>美食特产 酒水茶叶 蛋糕预订</span></div>
+					<div class="f13"><strong>商旅出行</strong> <br/><span>酒店预订 机票预订 商旅综合</span></div>
+					<div class="f20"><strong>日用百货</strong> <br/><span>飞飞商城 图书教育 百货</span></div>
+					<div class="f13"><strong>男女服装 </strong> <br/><span>时尚女装 品牌男装 男女内衣</span></div>
+					<div class="f20"><strong>鞋包配饰</strong> <br/><span> 潮流女鞋 时尚包包</span></div>
+					<div class="f13"><strong>美容美妆 </strong> <br/><span>天天网 美妆商城 眼睛美瞳 </span></div>
+					<div class="f20"><strong>母婴保健</strong> <br/><span>壹药网 康爱多 医药保健</span></div>
+					<div class="f13"><strong>娱乐生活</strong> <br/><span> 游戏 彩票 演出票务</span></div>
+				</div>
+				<div class="f6">
+					
+					<div class="f14">
+						<img src="img/focus3.jpg"/>
+						<span class="f57">早市天黑黑四周年庆</span>
+						<span class="f58">办卡领取双肩包</span>
+						<span class="f59">音乐消暑 冰爽一夏</span>
+						<span class="f60">腾讯积分汇源</span>
+					</div>
+					
+					<div class="f15"><img src="img/m1.jpg"/></div>
+					<div class="f16"><img src="img/m2.jpg"/></div>
+					<div class="f17"><img src="img/m3.jpg"/></div>
+					<div class="f18"><img src="img/m4.jpg"/></div>
+					<div class="f19"><img src="img/m5.jpg"/></div>
+				</div>
+				
+				<div class="f7">
+					<div class="f21">
+						<div class="f22">
+							<div class="f23">高级搜索</div><br/>
+							<form>
+								<div class="f25"><input type="text" value="请输入关键字" ></div><br/>
+								<div class="f24"><input type="submit" value="搜索" ></div>
+							</form>
+						</div>
+						<div class="f26">
+							<div class="f27">彩贝能做什么<br/>
+							<div class="f28">100彩贝=￥1.00元
+							<div class="f28">尊享优质商旅订阅服务<br/>
+							<div class="f28">可兑换近千款精美礼品<br/>
+						</div>
+					</div>	
+					<div class="f29">	
+						<div class="f30">
+							<div class="f31">快速入口</div>
+							<div class="f32">
+								<div class="f33">商家导航	 拍拍返利</div>
+								<div class="f33">腾讯业务	  娱乐生活</div>
+								<div class="f33">拾贝人物	  兑换码激活</div>
+							</div>
+						</div>
+						<div class="f34">
+							<div class="f31">关注彩贝微信有惊喜</div>
+							<div class="f36"><img src="img/showqrcode.jpg" width="100px" height="100px"</div>
+						</div>
+					</div>
+				
+					
+				</div>
+			
+			</div>
+			<div class="f37">
+					<span class="f38">积分商城</span> 	
+					<span class="f39">100彩贝=￥1.00元</span>
+			</div>
+			
+			<div class="f8">
+					<div class="f40">
+						
+						<img class="f41" src="img/7.jpg" width="200px" height="300px"/>
+						<span class="f42">圣尔呢-让你怦然心动，2014最新潮流性感个性款式，穿出不一样的时尚！	</span>
+					</div>
+					<div class="f43">
+						<img class="f41" src="img/8.jpg" width="200px" height="300px"/>
+						<span class="f42">圣尔呢-让你怦然心动，2014最新潮流性感个性款式，穿出不一样的时尚！</span>
+					</div>
+					<div class="f44">
+						<img class="f41" src="img/9.jpg" width="200px" height="300px"/>
+						<span class="f42">圣尔呢-让你怦然心动，2014最新潮流性感个性款式，穿出不一样的时尚！</span>
+						
+					</div>
+					<div class="f45">
+						<img class="f41" src="img/10.jpg" width="200px" height="300px"/>
+						<span class="f42">圣尔呢-让你怦然心动，2014最新潮流性感个性款式，穿出不一样的时尚！</span>
+						
+					</div>
+					<div class="f46">
+						<img class="f41" src="img/11.jpg" width="200px" height="300px"/>
+						<span class="f42">圣尔呢-让你怦然心动，2014最新潮流性感个性款式，穿出不一样的时尚！</span>
+						
+					</div>
+					<div class="f47">
+						<img class="f41" src="img/12.jpg" width="200px" height="300px"/>
+						<span class="f42">圣尔呢-让你怦然心动，2014最新潮流性感个性款式，穿出不一样的时尚！</span>
+						
+					</div>
+					<div class="f48">
+						<img class="f41" src="img/13.jpg" width="200px" height="300px"/>
+						<span class="f42">圣尔呢-让你怦然心动，2014最新潮流性感个性款式，穿出不一样的时尚！</span>
+						
+					</div>
+					<div class="f49">
+						<img class="f41" src="img/14.jpg" width="200px" height="300px"/>
+						<span class="f42">圣尔呢-让你怦然心动，2014最新潮流性感个性款式，穿出不一样的时尚！</span>
+					
+					</div>
+					<div class="f50">
+						<img class="f41" src="img/18.jpg" width="200px" height="300px"/>
+						<span class="f42">圣尔呢-让你怦然心动，2014最新潮流性感个性款式，穿出不一样的时尚！</span>
+						
+					</div>
+					<div class="f51">
+						<img class="f41" src="img/19.jpg" width="200px" height="300px"/>
+						<span class="f42">圣尔呢-让你怦然心动，2014最新潮流性感个性款式，穿出不一样的时尚！</span>
+					
+					</div>
+					<div class="f52">
+						<img class="f41" src="img/17.jpg" width="200px" height="300px"/>
+						<span class="f42">圣尔呢-让你怦然心动，2014最新潮流性感个性款式，穿出不一样的时尚！</span>
+					
+					</div>
+					<div class="f53">
+						<img class="f41" src="img/18.jpg" width="200px" height="300px"/>
+						<span class="f42">圣尔呢-让你怦然心动，2014最新潮流性感个性款式，穿出不一样的时尚！</span>
+					
+					</div>
+					
+			</div>
+					
+			<div class="f54">
+						<ul>
+							 	<li>关于腾讯</li>
+								<li>AboutTencent</li>
+								<li>服务条款</li>
+								<li>广告服务</li>
+								<li>腾讯招聘</li>
+								<li>手机京东</li>
+								<li>客服中心</li>
+								<li>网站导航</li>
+								
+								
+						</ul>
+						<div class="f55">
+							Copyright&copy1998-2015&nbspTencent.All&nbsp;Rights&nbsp;Reserved.
+						</div>
+						<div class="f56">
+							腾讯公司  版权所有
+						</div>	
+						
+			
+			
+					
+				
+		</div>
+	</body>
+</html>

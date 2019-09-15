@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<table align="center" cellspacing="15px">
+		</table>
+		<style>
+			td{
+				width:150px;
+				height: 150px;
+				font-size: 20px;
+				text-align: center;
+				
+				color: white;
+				font-weight: 700;
+				background-color: rgb(135,206,235);
+				border: solid 1px black;
+			}
+			button{
+				width: 60px;
+				height: 35px;
+			}
+		</style>
+		<script>
+			function fn1(){
+			 	var b=document.getElementsByTagName("table")[0];
+                var a=" ";
+                for(var i=0;i<3;i++){    //获取表格
+			        a+="<tr>"
+    			        for(var j=0;j<3;j++){
+    			            a+="<td></td>"
+    			        }
+			        a+="</tr>"
+			    }
+			    b.innerHTML=a;       //注意：表格如果没给任何样式就相当于隐藏了，看不到，但确实有
+			}
+    		    fn1();        //调用函数
+			var d=document.getElementsByTagName("td");
+			var f;
+			var e=0;
+			d[0].innerHTML="600元优惠券";
+			d[1].innerHTML="800元优惠券";
+			d[2].innerHTML="1000元优惠券";
+			d[3].innerHTML="200元优惠券";
+			d[4].innerHTML="<button onclick='fn2()'>开始</button>&nbsp;&nbsp;<button onclick='fn3()'>停止</button>";
+			d[5].innerHTML="600元优惠券";
+			d[6].innerHTML="600元优惠券";
+			d[7].innerHTML="1000元优惠券";
+			d[8].innerHTML="800元优惠券";
+			function fn2(){
+				f=setInterval(function fn4(){
+					d[e].style.backgroundColor="rgb(135,206,235)";
+					e=parseInt(Math.random()*9);
+					if(e==4){
+						e=3;
+						
+					}
+					d[e].style.backgroundColor="red";
+				},1000)
+			}
+			function fn3(){
+				clearInterval(f);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			/****************************顶层*****************************/
+			.a1{
+				width: 1300px;
+				height: 25px;
+				/*border: solid 1px black;*/
+				background-color: rgb(249,249,249);
+				margin: 0 auto;
+			}
+			.a2{
+				width: 234px;
+				height: 25px;
+				line-height: 25px;
+				text-align: center;
+				/*border: solid 1px black;*/
+				font-size: 13px;
+				float: left;
+			}
+			.a3{
+				width: 700px;
+				height: 25px;
+				/*border: solid 1px black;*/
+				margin-left: 10px;
+				/*list-style: none;*/
+				float:right;
+			}
+			ul{
+				width: 650px;
+				height: 20px;
+				margin-left: 42px;
+				margin-top: 6px;
+			}
+			.a6,.a7{
+				list-style: none;
+				width: 80px;
+				height: 15px;
+				line-height: 15px;
+				text-align: center;
+				font-size: 14px;
+				float: left;
+				border-right: solid 1px black;
+			}
+			.a5{
+				list-style: none;
+				width: 80px;
+				height: 15px;
+				line-height: 15px;
+				text-align: center;
+				position: relative;
+				font-size: 14px;
+				float: left;
+				border-right: solid 1px black;
+			}
+			.a8{
+				list-style: none;
+				width: 90px;
+				height: 15px;
+				line-height: 15px;
+				text-align: center;
+				position: relative;
+				font-size: 14px;
+				float: left;
+				border-right: solid 1px black;
+			}
+		
+			.a9,.a10,.a11{
+				list-style: none;
+				width: 90px;
+				height: 15px;
+				line-height: 15px;
+				text-align: center;
+				font-size: 14px;
+				/*position: absolute;*/
+				float: left;
+				border-right: solid 1px black;
+			}
+		
+			.a1 .a2 a{
+				text-decoration: none;
+				color: red;
+				cursor: pointer;
+			}
+			.a12{
+				width: 15px;
+				height: 15px;
+				/*border: solid 1px black;*/
+				position: absolute;
+				right: 54px;
+				top: 0px;
+				background-image: url(img/home_sprite.png);
+				background-position: 511px -86px;
+			}
+			.a13{
+				width: 16px;
+				height: 17px;
+				/*border: solid 1px black;*/
+				position: absolute;
+				right: 66px;
+				top: -2px;
+				background-image: url(img/home_sprite.png);
+				background-position: 517px -69px;
+			}
+				/***************************顶层*******************************/
+				
+				/***************************logo区******************************/
+			.a14{
+				width: 1300px;
+				height: 110px;
+				margin: 0 auto;
+				/*border: solid 1px black;*/
+			}	
+			.a15{
+				width: 250px;
+				height: 110px;
+				margin-left:24px;
+				/*border: solid 1px black;*/
+			}	
+				/***************************logo区******************************/
+				
+				
+				/***************************sousuo区******************************/
+			.a16{
+				width: 1300px;
+				height: 30px;
+				margin: 0 auto;
+				background-color: red;
+			}	
+			.a17{
+				width: 188px;
+				height: 30px;
+				font-size: 14px;
+				line-height: 30px;
+				font-weight: 600;
+				/*text-align: center;*/
+				text-indent: 18px;
+				margin-left: 23px;
+				color: white;
+				position: relative;
+				/*border: solid 1px black;*/
+				float: left;
+			}
+			.a18{
+				width: 15px;
+				height: 15px;
+				/*border: solid 1px black;*/
+				background-image: url(img/home_sprite.png);
+				background-position: 1px 12px;
+				position: absolute;
+				right: 0px;
+				top: 7px;
+				float: left;
+			}
+			.a19,.a20{
+				width: 900px;
+				height: 30px;
+				/*border: solid 1px black;*/
+				float: left;
+				margin-left: 30px;
+				margin-top: 1px;
+			}
+		.a19 .a20 li{
+				list-style: none;
+				width: 68px;
+				height: 25px;
+				font-size: 14px;
+				line-height: 25px;
+				text-align: center;
+				font-weight: 600;
+				margin-left: 5px;
+				color: white;
+				/*border: solid 1px black;*/
+				float: left;
+			}
+				
+				/***************************sousuo区******************************/
+				
+				
+				/***************************分类区******************************/
+				
+		.a21{
+			width: 1250px;
+			height: 1000px;
+			margin: 0 auto;
+			/*border: solid 1px black;*/
+			margin-top: 25px;
+			position: relative;
+			
+		}	
+		.b4{
+			width: 160px;
+			height: 10px;
+			position: absolute;
+			right: 61px;
+			top: 284px;
+		}
+		.b5{
+			width: 160px;
+			height: 10px;
+			list-style: none;
+		}
+		.b6{
+			width:10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: rgb(54,95,133);
+			border: solid 1px black;
+			margin: 5px;
+			float: left;
+		}
+		.b7{
+			width:10px;
+			height: 10px;
+			border-radius: 50%;
+			border: solid 1px black;
+			background-color: rgb(180,180,180);
+			
+			margin: 5px;
+			float: left;
+		}
+		
+		
+		.a22{
+			width: 216px;
+			height: 579px;
+			border: solid 1px ;
+			border-color: rgb(82,121,108);
+			float: left;
+		}	
+		.header{
+			width: 216px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 18px;
+			text-align: center;
+			font-weight: 600;
+			color: white;
+			background-color:rgb(72,122,111);
+		}
+		.sect{
+			width: 200px;
+			height: 30px;
+			line-height: 30px;
+			/*text-align: center;*/
+			text-indent: 10px;
+			border-bottom: dashed 1px ;
+			margin-left: 8px;
+			font-size: 15px;
+			color: rgb(63,118,104);
+			border-bottom-color: rgb(63,118,104);
+		}
+		.secti{
+			width: 200px;
+			height: 90px;
+			line-height: 30px;
+			/*text-align: center;*/
+			font-size: 15px;
+			margin-left: 8px;
+			text-indent: 10px;
+			border-bottom: dashed 1px ;
+			border-bottom-color: rgb(63,118,104);
+			color: rgb(63,118,104);
+		}
+		.sectio{
+			width: 200px;
+			height: 120px;
+			line-height: 30px;
+			/*text-align: center;*/
+			font-size: 15px;
+			margin-left: 8px;
+			text-indent: 10px;
+			color: rgb(63,118,104);
+			border-bottom-color: rgb(63,118,104);
+			border-bottom: dashed 1px ;
+		}
+		.section{
+			width: 200px;
+			height: 60px;
+			line-height: 30px;
+			/*text-align: center;*/
+			font-size: 15px;
+			margin-left: 8px;
+			text-indent: 10px;
+			color: rgb(63,118,104);
+			border-bottom-color: rgb(63,118,104);
+			border-bottom: dashed 1px ;
+		}
+		.article{
+			width: 200px;
+			height: 60px;
+			line-height: 30px;
+			/*text-align: center;*/
+			font-size: 14px;
+			margin-left: 8px;
+			color: rgb(63,118,104);
+			/*text-indent: 10px;*/
+		}
+		.a23{
+			width: 750px;
+			height: 315px;
+			margin-left: 8px;
+			float: left;
+			position: relative;
+		}
+		.b0{
+			width: 180px;
+			height: 15px;
+			position: absolute;
+			right: 55px;
+			top: 276px;
+			
+		}
+		.b1{
+			width: 180px;
+			height: 15px;
+			list-style: none;
+			margin-top: 0px;
+			/*border: solid 1px black;*/
+		}
+		.b2{
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			font-size: 14px;
+			margin-left: 10px;
+			text-align: center;
+			line-height: 20px;
+			color: white;
+			background-color: rgb(254,70,75);
+			
+			border: solid 1px black;
+			float: left;
+		}
+		.b3{
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			margin-left: 10px;
+			color: black;
+			background-color:white;
+			font-size: 14px;
+			text-align: center;
+			line-height: 20px;
+			border: solid 1px black;
+			float: left;
+		}
+		
+		.a24{
+			width: 750px;
+			height: 50px;
+			margin-left: 8px;
+			margin-top: 10px;
+			float: left;
+			/*border: solid 1px;*/
+		}
+		.a25{
+			width:263px;
+			height: 115px;
+			border: solid 1px ;
+			border-color: rgb(232,232,232);
+			position: absolute;
+			z-index: 1;
+			right: 0px;
+			top: 0px;
+			
+		}
+		.a27{
+			width: 263px;
+			height: 25px;
+			line-height: 25px;
+			font-size: 13px;
+			text-indent: 0px;
+		}
+		.a28{
+			width: 263px;
+			height: 25px;
+			line-height: 25px;
+			font-size: 16px;
+			font-weight: 900;
+			list-style: none;
+			text-indent: -18px;
+		}
+		.a29{
+			width: 263px;
+			height: 190px;
+			border: solid 1px ;
+			border-color: rgb(232,232,232);
+			position: absolute;
+			right: 0px;
+			top: 123px;
+		
+		}
+		.a30{
+			width: 263px;
+			height: 20px;
+			margin-top: 5px;
+			/*border: solid 1px black;*/
+		}
+		
+		.a33{
+			width: 129px;
+			height: 20px;
+			line-height: 20px;
+			/*border: solid 1px black;*/
+			font-size: 16px;
+			text-indent:24px;
+			font-weight: 900;
+			float: left;
+		}
+		.a34{
+			width: 129px;
+			height: 20px;
+			line-height: 20px;
+			/*border: solid 1px black;*/
+			font-size: 13px;
+			text-align: right;
+			float: left;
+		}
+		.a31{
+			width: 120px;
+			height: 120px;
+			/*border: solid 1px black;*/
+			margin-left: 18px;
+			margin-top: 19px;
+			float: left;
+		}
+		.a32{
+			width: 110px;
+			height: 80px;
+			/*font-weight: 700;*/
+			/*border: solid 1px black;*/
+			margin-left: -8px;
+			margin-top: 41px;
+			font-size: 14px;
+			float: left;
+			
+		}
+		
+		
+		.a35{
+			width: 60px;
+			height: 20px;
+			margin-top: 0px;
+			margin-left: 0px;
+			
+		}
+		.a36{
+			width: 10px;
+			height: 10px;
+			border: solid 1px;
+			list-style: none;
+		}
+		
+		
+		
+		.a37{
+			width: 15px;
+			height: 25px;
+			border: solid 1px black;
+			background-image: url(img/book_fanye_btn.png);
+			background-position: -5px 37px;
+			position: absolute;
+			right: 248px;
+			top: 202px;
+		}
+		.a38{
+			width: 15px;
+			height: 25px;
+			background-image: url(img/book_fanye_btn.png);
+			background-position: -31px 37px;
+			position: absolute;
+			border: solid 1px black;
+			right: 0px;
+			top: 202px;
+		}
+		.a39{
+			width: 750px;
+			height: 332px;
+			margin-left: 8px;
+			margin-top: 10px;
+			/*border:solid 1px black;*/
+			float: left;
+			overflow: hidden;
+		}
+		.a43,.a44,.a46{
+			width: 166px;
+			height: 400px;
+			float: left;
+			margin-left: 14px;
+			text-align: center;
+			position: relative;
+		}
+		.a45{
+			width: 166px;
+			height: 400px;
+			float: left;
+			margin-left: 14px;
+			text-align: center;
+			position: relative;
+		}
+		/*.a44{
+			width: 180px;
+			height: 400px;
+			float: left;
+			margin-left: 5px;
+		}.a45{
+			width: 180px;
+			height: 400px;
+			float: left;
+			margin-left: 5px;
+			}
+		.a46{
+			float: left;
+			width: 180px;
+			height: 400px;
+			margin-left: 5px;
+		}*/
+		.a47{
+			width: 52px;
+			height: 552px;
+			position: absolute;
+			right: 10px;
+			top: 0px;
+		}
+		.a48{
+			width: 263px;
+			height: 394px;
+			border: solid 1px ;
+			border-color: rgb(232,232,232);
+			margin-top: -52px;
+			float: right;
+		}
+		.a49{
+			width: 263px;
+			height: 38px;
+			position: relative;
+			font-size: 16px;
+			font-weight: 900;
+			text-indent: 32px;
+			line-height: 38px;
+			border: solid 1px ;
+			border-color: rgb(232,232,232);
+		}
+		.a50{
+			width: 25px;
+			height: 30px;
+			/*border: solid 1px black;*/
+			position: absolute;
+			right: 237px;
+			top: 3px;
+			background-image: url(img/sprite.png);
+			background-position: 2px 0px;
+		}
+		.a52,.a53{
+			width: 263px;
+			height: 13px;
+			/*border: solid 1px black;*/
+			margin-left: 0.3px;
+			margin-top: 0px;
+		}
+		.a54{
+			width: 50.6px;
+			height: 15px;
+			line-height: 15px;
+			font-size: 12px;
+			text-align: center;
+			border: solid 1px ;
+			border-color: rgb(232,232,232);
+			
+			list-style: none;
+			float: left;
+		}
+		.a66{
+			width: 50.6px;
+			height: 15px;
+			line-height: 15px;
+			font-size: 12px;
+			text-align: center;
+			/*border: solid 1px ;*/
+			/*border-color: white;*/
+			list-style: none;
+			float: left;
+		}
+		.a67{
+			width: 50.6px;
+			height: 15px;
+			line-height: 15px;
+			font-size: 12px;
+			text-align: center;
+			/*border-right:none;
+			border-top-color: rgb(232,232,232);
+			border-bottom-color: rgb(232,232,232);
+			border-left-color: rgb(232,232,232);
+			border-top: solid 1px;
+			border-left: solid 1px;
+			border-bottom: solid 1px;*/
+			list-style: none;
+			float: left;
+		}
+		.a55{
+			width: 263px;
+			height: 336px;
+			border: solid 1px ;
+			border-color: rgb(232,232,232);
+			float: left;
+		}
+		ol{
+			width: 263px;
+			height: 300px;
+			list-style-position: inside;
+			float: left;
+			
+		}
+		.a56{
+			width: 250px;
+			height: 150px;
+			/*border: solid 1px black;*/
+			font-size: 15px;
+			margin-left: 20px;
+		}
+		.a57{
+			width: 240px;
+			height: 150px;
+			font-size: 13px;
+			/*border-bottom: solid 1px black;*/
+			/*float: left;*/
+		}
+		.a58{
+			width: 80px;
+			height: 100px;
+			/*border: solid 1px black;*/
+			margin-right: 37px;
+			margin-top: 6px;
+			float: right;
+		}
+		.a59{
+			width: 240px;
+			height: 35.4px;
+			font-size: 14px;
+			line-height: 35.4px;
+			text-indent: 10px;
+			margin-left: 10px;
+			border-top: dashed 1px ;
+			border-top-color: rgb(235,235,235);
+		}
+		
+	
+				/***************************分类区******************************/
+				
+				
+				
+		</style>
+	</head>
+	<body>
+			<!--顶层开始-->
+		<div class="a1">
+			<div class="a2">
+				欢迎光临当当网，请<a href="#">登录</a> <a href="#">免费注册</a>
+			</div>
+			<div class="a3">
+				<ul class="a4">
+					<li class="a5">
+						<div class="a12"></div>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;购物车
+					</li>
+					<li class="a6">我的订单</li>
+					<li class="a7">当当自出版</li>
+					<li class="a8">
+						<div class="a13"></div>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;手机当当
+					</li>
+					<li class="a9">
+						我的当当
+					</li>
+					<li class="a10">
+						企业采购
+					</li>
+					<li class="a11">
+						客户服务
+					</li>
+				</ul>
+			</div>
+		</div>
+			<!--顶层结束-->
+				
+			<!--logo区开始-->
+		<div class="a14">
+			<div class="a15">
+				<img src="img/logo.jpg"/>
+			</div>
+		</div>
+			<!--logo区结束-->
+		
+			<!--sousuo区开始-->
+			<div class="a16">
+				<div class="a17">
+					全部商品详细分类
+					<div class="a18"></div>
+				</div>
+				<div class="a19">
+					<ul class="a20">
+						<li>唯品会</li>
+						<li>图书</li>
+						<li>电子书</li>
+						<li>服装</li>
+						<li>运动户外</li>
+						<li>婴育童</li>
+						<li>家具</li>
+						<li>当当优品</li>
+						<li>电器城</li>
+						<li>当当超市</li>
+						<li>海外购</li>
+					</ul>
+				</div>
+			</div>
+			<!--sousuo区结束-->
+			
+			<!--sousuo区结束-->
+		<div class="a21">
+			<div class="b4">
+					<ul class="b5">
+						<li class="b6"></li>
+						<li class="b7"></li>
+						<li class="b7"></li>
+						<li class="b7"></li>
+					</ul>
+				</div>
+			<div class="a22">
+				<header class="header">
+					图书分类
+				</header>
+				<section class="sect">
+					<strong>电子书 豆瓜原创</strong>
+				</section>	
+				<section class="sect">
+					<strong>小说</strong>
+				</section>	
+				<section class="section">
+					<strong>文艺</strong>
+						<article class="article">
+							文学|传记| 艺术|摄影
+						</article>
+				</section>
+				<section class="section">
+					<strong>文艺</strong>
+					<article class="article">
+						文学|传记| 艺术|摄影
+					</article>
+				</section>
+				<section class="section">
+					<strong>青春</strong>
+					<article class="article">
+						青春文学|动漫|幽默
+					</article>
+				</section>
+				<section class="secti">
+					<strong>童书</strong>
+					<article class="article">
+						0-2|3-6|7-10|11-14|<br/>
+						&nbsp;&nbsp;科普/百科|画图书|文字
+					</article>
+				</section>
+				<section class="sect">
+					<strong>励志/成功</strong>
+				</section>
+				<section class="sectio">
+					<strong>人文社科</strong>
+					<article class="article">
+						历史|古籍|哲学/宗教|文化|<br/>
+						&nbsp;&nbsp;政治/军事|法律|社会科学|<br/>
+						&nbsp;&nbsp;心理学
+					</article>
+				</section>
+				<section class="sect">
+					<strong>英文原版书 港台图书</strong>
+				</section>
+				<section class="sect">
+					<strong>工具书</strong>
+				</section>
+				
+				
+			</div>
+				
+			<div class="a23">
+				<img src="img/focus.jpg"/>
+				<div class="b0">
+					<ul class="b1">
+						<li class="b2">1</li>
+						<li class="b3">2</li>
+						<li class="b3">3</li>
+						<li class="b3">4</li>
+						<li class="b3">5</li>
+					</ul>
+				</div>
+			</div>
+			<div class="a24">
+				<img src="img/new_book.png" />
+				
+			</div>
+			
+			<div class="a25">
+				<ul class="a26">
+					<li class="a28">最新动态</li>
+					<li class="a27">杨绛先生104岁生日快乐</li>
+					<li class="a27">悦享频道:沈从文给家人的31封信</li>
+					<li class="a27">小时代:我用十年青春,赴你最后之约</li>
+				</ul>
+			</div>
+			<div class="a29">
+				<div class="a30">
+					<div class="a33">
+						新书预售
+					</div>
+					<div class="a34">
+						预售更多
+					</div>
+				</div>
+				<div class="a31">
+					<img src="img/book.jpg"/>
+				</div>
+				<div class="a32">
+					极地重生沙克尔顿<br/>
+					南极史诗之旅,探<br/>
+					<br/>
+					<strong>￥40.10</strong>
+				</div>
+				<!--<div class="a35">
+					<ul>
+						<li class="a36"></li>
+						<li class="a36"></li>
+						<li class="a36"></li>
+						<li class="a36"></li>
+						
+					</ul>
+				</div>-->
+				
+			</div>
+			<div class="a37"></div>
+			<div class="a38"></div>
+			
+			<div class="a39">
+				<div class="a43">
+					<div class="a40">
+						<img src="img/book2.jpg" />
+					</div>
+					<div class="a41">
+							来得及<br/>
+							<br/>
+							何炅<br/>
+						
+							￥40.00
+					</div>
+					<div class="a40">
+						<img src="img/book2.jpg" />
+					</div>
+					<div class="a47">
+						<img src="img/xsq.png"/>
+					</div>
+				</div>
+					
+				<div class="a44">
+					<div class="a40">
+						<img src="img/book2.jpg" />
+					</div>
+					<div class="a41">
+							来得及<br/>
+							<br/>
+							何炅<br/>
+								
+							￥40.00<br/>
+						
+					</div>
+					<div class="a40">
+						<img src="img/book2.jpg" />
+					</div>
+				</div>
+				
+				<div class="a45">
+					<div class="a40">
+						<img src="img/book2.jpg" />
+					</div>
+					<div class="a41">
+							来得及<br/>
+						<br/>
+							何炅<br/>
+						
+							￥40.00
+					</div>
+					<div class="a40">
+						<img src="img/book2.jpg" />
+					</div>
+				</div>
+				
+				<div class="a46">
+					<div class="a40">
+						<img src="img/book2.jpg" />
+					</div>
+					<div class="a41">
+							来得及<br/>
+						<br/>
+							何炅<br/>
+						
+							￥40.00
+					</div>
+					<div class="a40">
+						<img src="img/book2.jpg" />
+					</div>
+					
+					
+					<div class="a47">
+						<img src="img/xsq.png"/>
+					</div>
+				</div>
+			
+			</div>
+			
+			<div class="a48">
+				<div class="a49">
+					<div class="a50">
+					</div>
+					<div class="a51">
+						新书热卖榜
+					</div>
+				</div>
+					
+				<div class="a52">
+					<ul class="a53">
+						<li class="a66">总榜</li>
+						<li class="a54">图书</li>
+						<li class="a54">励志</li>
+						<li class="a54">保健</li>
+						<li class="a67">美食</li>
+					</ul>
+				</div>
+				
+				<div class="a55">
+					<ol>
+						<li class="a56">
+								<div class="a57">
+									<img src="img/book.jpg"/>
+								<!--</div>-->
+									<div class="a58">
+										<strong>极地重生沙克尔顿
+										南极</strong>
+										<br/>
+										<br/>
+										<strong>￥40.10</strong><br/>
+										<br/>
+										333条评论
+									</div>
+								</div>
+						</li>
+						<li class="a59">奇幻梦境：一本漫游奇境的手绘</li>
+						<li class="a59">奇幻梦境：一本漫游奇境的手绘</li>
+						<li class="a59">奇幻梦境：一本漫游奇境的手绘</li>
+						<li class="a59">奇幻梦境：一本漫游奇境的手绘</li>
+						<li class="a59">奇幻梦境：一本漫游奇境的手绘</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+			<!--sousuo区结束-->
+	</body>
+</html>
+

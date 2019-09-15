@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+	</head>
+	<body>
+		<input type="text" /><button>点我</button>
+		<table border="1px">
+			<tr>
+				<th>姓名</th>
+				<th>性别</th>
+				<th>年龄</th>
+				<th>身高</th>
+			</tr>
+		</table>
+		<div style="width: 190px;height: 100px;border: solid 1px black;margin-top: 5px;"></div>
+		<script>
+			$.get("new_file.json","",function(data){
+				var a="";
+				for(var i=0;i<data.user.length;i++){	//拼接<tr><td>+data.user[i].name+</td></tr>
+					a="<tr>"
+						a+="<td>"+data.user[i].name+"</td>";
+						a+="<td>"+data.user[i].sex+"</td>";
+						a+="<td>"+data.user[i].age+"</td>";
+						a+="<td>"+data.user[i].height+"</td>";
+					a+="</tr>"
+					$("table").append(a)
+				}
+			})
+			$("button").click(function(){		
+				$.get("new_file.json","",function(data){
+					var c=[];
+					var b=$("input").val();
+					for(var j=0;j<data.user.length;j++){
+						if(data.user[j].name==b){
+							c.push(data.user[j].name);
+							c.push(data.user[j].sex);
+							c.push(data.user[j].age);
+							c.push(data.user[j].height);
+							
+						}
+						if(data.user[j].sex==b){
+							c.push(data.user[j].name);
+							c.push(data.user[j].sex);
+							c.push(data.user[j].age);
+							c.push(data.user[j].height);
+						}
+						if(data.user[j].age==b){
+							c.push(data.user[j].name);
+							c.push(data.user[j].age);
+							c.push(data.user[j].age);
+							c.push(data.user[j].height);
+						}
+						if(data.user[j].height==b){
+							c.push(data.user[j].name);
+							c.push(data.user[j].age);
+							c.push(data.user[j].age);
+							c.push(data.user[j].height);
+						}
+					}
+//					$("input").val(c)
+					$("div").html(c)
+				})
+			})
+		</script>
+	</body>
+</html>

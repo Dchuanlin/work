@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.container{
+				width: 200px;
+				height: 150px;
+				margin: 0 auto;
+			}
+			.head{
+				font-size: 18px;
+				font-weight: 700;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="head">选择你的爱好：</div>
+			<ul>
+				<li><input type="checkbox"/>音乐</li>
+				<li><input type="checkbox"/>登山</li>
+				<li><input type="checkbox"/>游泳</li>
+				<li><input type="checkbox"/>阅读</li>
+				<li><input type="checkbox"/>打球</li>
+				<li><input type="checkbox"/>跑步</li>
+				<li><input type="checkbox"/>其它</li>
+				<hr/>
+				<li><button onclick="fn1()">查看我选择的爱好</button></li>
+			</ul>
+			<div></div>
+		</div>
+		<script>
+//需求：  //1、在上行选择自己的爱好后
+		//2、点击下行“查看我选择的爱好”按钮，在下方显示复选框选中的爱好文字
+		function fn1(){		
+			var a=[];
+			var b=document.getElementsByTagName("input");
+			var c=document.getElementsByTagName("div")[2];
+			for(var i=0;i<b.length;i++){	//遍历所有的input标签
+				if(b[i].checked){			//判断是否有选中的
+					a.push(b[i].nextSibling.nodeValue);//将选中的爱好放到一个空数组中
+					c.innerHTML=a.join(" ");		//将数组中的内容显示在第二个div标签中
+				}
+			}
+		}
+		</script>
+	</body>
+</html>

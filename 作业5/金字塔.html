@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body style="text-align: center;">
+		<script>
+			var a=[];
+			for(var i=0;i<8;i++){		//行数
+				for(var j=0;j<=i;j++){	//单行*个数
+					a[j]="*";			//字符串+字符串		+表示连接
+				}
+				
+				document.write(a.join(" ")+"<br/>");  //空格连接
+			}
+			
+		</script>
+	</body>
+</html>

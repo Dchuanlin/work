@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 800px;
+				height: 400px;
+				position: relative;
+				margin: 0 auto;
+			}
+			img{
+				width: 250px;
+				height: 200px;
+			}
+			.b{
+				width: 250px;
+				height: 200px;
+				list-style: none;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<ul style="display: block;">
+				<li class="b" ><img onclick="fn1(this)" src="img/1.jpg"/></li>
+				<li class="b" ><img onclick="fn1(this)" src="img/2.jpg"/></li>
+				<li class="b" ><img onclick="fn1(this)" src="img/3.jpg"/></li>
+				<li class="b" ><img onclick="fn1(this)" src="img/4.jpg"/></li>
+				<li class="b" ><img onclick="fn1(this)" src="img/5.jpg"/></li>
+				<li class="b" ><img onclick="fn1(this)" src="img/6.jpg"/></li>
+			</ul>
+			<div style="display: none;">
+				<img style="float:left" src=" " id="_img"/>
+				<span onclick="fn2()" style="float:left;background-color: gray;font-size: 25px;cursor: pointer;">X</span>
+			</div>
+		</div>
+		
+	</body>
+	<script>
+		//1、点击ul里的img标签 显示放大图片
+		function fn1(e){
+			var c=document.getElementsByTagName("div")[1];		//显示第二个div块
+			c.style.display="block";
+			
+			var f=document.getElementsByTagName("ul")[0];		//将标签UL里的透明度调暗、背景颜色调黑
+			f.style.opacity="0.7";
+			f.style.backgroundColor="black";
+			
+			var b=document.getElementsByTagName("img")[6];		//放大图片定位 根据父标签定位到中央
+				b.style.width="500px";
+				b.style.height="250px";
+				c.style.position="absolute";
+				c.style.top="50px";
+				c.style.left="150px";
+				
+			var d=document.getElementById("_img");			//获取放大图片里的img标签
+			d.src=e.src.slice(-9);							//将六张图片里的图片路径赋给放大图片区的img标签里
+															//e.src.slice(-9)：截取图片格式的后9位
+		}
+		//2、点击X 隐藏第二个div
+		function fn2(){	
+				var a=document.getElementsByTagName("div")[1];			//点击fn2()这个按钮隐藏第二个div
+				a.style.display="none";
+				
+				document.getElementsByTagName("ul")[0].style.opacity="1";	//将ul块透明度调高
+		}
+	</script>
+</html>

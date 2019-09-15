@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style>
+		div{
+			width: 600px;
+			height: 500px;
+			margin: 0 auto;
+			border: solid 1px black;
+		}
+	</style>
+	<body>
+		<div>
+			<canvas width="600" height="600"></canvas>
+		</div>
+		<script>
+			var a=document.getElementsByTagName("canvas")[0];
+			var b=a.getContext("2d")
+			b.beginPath()
+			for(var i=2;i<=8;i++){
+				
+				b.moveTo(100,50*i)
+				b.lineTo(500,50*i)
+				b.stroke()
+			}
+			b.closePath()
+			
+			b.beginPath()
+			for(var i=1;i<=5;i++){
+				
+				b.moveTo(100*i,100)
+				b.lineTo(100*i,400)
+				b.stroke()
+			}
+			b.closePath()
+			
+			b.beginPath()
+			b.strokeStyle="blue"
+		
+			b.arc(100,380,5,0,Math.PI*2,false)
+			b.fillStyle="white"
+			b.moveTo(104,379)
+			b.lineTo(200,350)
+			b.fill()
+			b.stroke()
+			b.closePath()
+			
+			b.beginPath()
+			b.arc(200,350,5,0,Math.PI*2,false)
+			b.strokeStyle="blue"
+			b.fillStyle="white"
+			b.fill()
+			b.moveTo(204,349)
+			b.lineTo(300,320)
+			b.stroke()
+			b.closePath()
+			
+			b.beginPath()
+			b.arc(300,320,5,0,Math.PI*2,false)
+			b.strokeStyle="blue"
+			b.fillStyle="white"
+			b.fill()
+			b.moveTo(304,319)
+			b.lineTo(350,280)
+			b.stroke()
+			b.closePath()
+			
+			b.beginPath()
+			b.arc(350,280,5,0,Math.PI*2,false)
+			b.strokeStyle="blue"
+			b.fillStyle="white"
+			b.fill()
+			b.moveTo(354,279)
+			b.lineTo(400,220)
+			b.stroke()
+			b.closePath()
+			
+			b.beginPath()
+			b.arc(400,220,5,0,Math.PI*2,false)
+			b.strokeStyle="blue"
+			b.fillStyle="white"
+			b.fill()
+			b.moveTo(404,219)
+			b.lineTo(500,100)
+			b.stroke()
+			b.closePath()
+			
+			b.beginPath()
+			b.arc(500,100,5,0,Math.PI*2,false)
+			b.fillStyle="white"
+			b.fill()
+			b.stroke()
+			b.closePath()
+			
+			//////////
+			b.beginPath()
+			b.strokeStyle="yellow"
+		
+			b.arc(100,360,5,0,Math.PI*2,false)
+			b.fillStyle="white"
+			b.moveTo(104,359)
+			b.lineTo(200,330)
+			b.fill()
+			b.stroke()
+			b.closePath()
+			
+			b.beginPath()
+			b.arc(200,330,5,0,Math.PI*2,false)
+			b.strokeStyle="yellow"
+			b.fillStyle="white"
+			b.fill()
+			b.moveTo(204,329)
+			b.lineTo(300,280)
+			b.stroke()
+			b.closePath()
+			
+			b.beginPath()
+			b.arc(300,280,5,0,Math.PI*2,false)
+			b.strokeStyle="yellow"
+			b.fillStyle="white"
+			b.fill()
+			b.moveTo(304,279)
+			b.lineTo(350,200)
+			b.stroke()
+			b.closePath()
+			
+			b.beginPath()
+			b.arc(350,200,5,0,Math.PI*2,false)
+			b.strokeStyle="yellow"
+			b.fillStyle="white"
+			b.fill()
+			b.moveTo(354,199)
+			b.lineTo(400,150)
+			b.stroke()
+			b.closePath()
+			
+			b.beginPath()
+			b.arc(400,150,5,0,Math.PI*2,false)
+			b.strokeStyle="yellow"
+			b.fillStyle="white"
+			b.fill()
+			b.moveTo(404,149)
+			b.lineTo(500,120)
+			b.stroke()
+			b.closePath()
+			
+			
+			
+			
+			b.beginPath()
+			b.arc(500,120,5,0,Math.PI*2,false)
+			b.fillStyle="white"
+			b.fill()
+			b.stroke()
+			b.closePath()
+		</script>
+	</body>
+</html>

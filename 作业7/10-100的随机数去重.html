@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//10-100之间的随机数去重
+
+			var b=[];
+			for(var i=1;i<=20;i++){
+				b.push(parseInt(Math.random()*90+10));
+			}
+			
+			var r=[];
+			for(var i=0;i<b.length;i++){		//谨记：外侧循环走一个,内侧循环走一圈
+				var n=0;
+				for(var j=0;j<r.length;j++){
+					if(r[j]==b[i]){
+						n=1;
+					}
+				}
+				if(n==0){
+					r.push(b[i]);
+				}
+			}
+			console.log(r);
+		</script>
+	</body>
+</html>

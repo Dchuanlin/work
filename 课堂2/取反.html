@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="f1()">反选</button>  
+		<input type="checkbox" checked="checked"/>  
+		<input type="checkbox" checked="checked"/>                                                                                                                                                                                                 
+		<input type="checkbox"/>                                                                                                                                                                                                                                                      
+		<input type="checkbox" checked="checked"/>                                                                                                                                                                                                                                                    
+		<input type="checkbox"/>                                                                                                                                                                                                                                                  
+		<script>
+			function f1(){
+				var _num=document.getElementsByTagName("input")
+				for(var i in _num){
+					if(_num[i].checked){
+						_num[i].checked=false;
+					}else{
+						_num[i].checked=true;
+					}
+					
+					
+				}
+			}
+		</script>
+		                                                                                                                                                                                                                            
+	</body>
+</html>

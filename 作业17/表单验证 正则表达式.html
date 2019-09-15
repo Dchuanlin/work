@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.a{
+				width: 760px;
+				height: 245px;
+				margin: 0 auto;
+			}
+			.b{
+				width: 760px;
+				height: 300px;
+				margin: 0 auto;
+				/*text-align: center;*/
+				background-color: rgb(245,248,255);
+				border: solid 1px black;
+			}
+			form{
+				margin-left: 130px;
+				margin-top: 20px;
+			}
+			.c{
+				width: 740px;
+				height: 40px;
+				/*border: solid 1px black;*/
+				
+				margin: 0 auto;
+				background-image: url(img/reg-end.jpg);
+				background-repeat: no-repeat;
+				background-position: -10px 20px;
+				margin-top: 20px;
+			}
+			.e{
+				display: inline-block;
+				margin-left: 300px;
+			}
+			.f{
+				display: inline-block;
+				margin-left: 50px;
+			}
+			input{
+				outline: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="a"><img src="img/reg-top.jpg"/></div>
+		<div class="b">
+			<form>
+				<lable>&emsp;&emsp;&emsp;用户名：</lable><input onfocus="fn1(this)" onblur="fn2()" type="text"/><span style="font-size: 14px;"></span><br/>
+				<lable>&emsp;&emsp;&emsp;&emsp;密码：</lable><input onfocus="fn1(this)" onblur="fn3()" type="password"/><span style="font-size: 14px;"></span><br/>
+				<lable>再次输入密码：</lable><input onfocus="fn1(this)" onblur="fn4()" type="password"/><span style="font-size: 14px;"></span><br/>
+				<lable>&emsp;&emsp;&emsp;E-mail：</lable><input onfocus="fn1(this)" onblur="fn5()" type="text"/><span style="font-size: 14px;"></span><br/>
+				<lable>&emsp;&emsp;个人简介：</lable><textarea style="height: 60px;width: 167px;margin-top:2px;"></textarea>
+			</form>
+			<div class="c"></div>
+			<button class="e" onclick="fn6()">提交</button>
+			<button class="f" onclick="fn7()">重置</button>
+		</div>
+		<script>
+			
+			var y=0;//提交成功条件
+			var x=1;//提交失败条件
+			
+			//获取焦点改变的样式
+			function fn1(a){
+				a.style.border="solid 1px red";
+				a.value="";		//清空指定输入框
+			}
+			//第一个input框失去焦点后实现的效果
+			function fn2(){
+				var c=document.getElementsByTagName("input")[0];
+				var f=document.getElementsByTagName("span")[0];
+				var e=c.value;
+				var d=/^.{4,16}$/;	
+				if(d.test(e)==false){
+					f.innerHTML="请输入4-16位字符，请重新输入";
+					y=1;
+					x=1;
+					return;
+				}
+				var g=/^\w{4,16}$/;				//数字、字母、下划线组成的4-16位字符
+				if(g.test(e)==false){
+					f.innerHTML="用户名必须由数字、字母、下划线组成的4-16位字符";
+					y=1
+					x=1;
+					return;
+				}
+				if((g.test(e)==true) && (d.test(e)==true)){
+					c.style.border="solid 1px green";
+					f.innerHTML="";
+					y=0;
+					x=0;
+				}
+			}
+			//第二个input框失去焦点后实现的效果
+			function fn3(){
+				var c=document.getElementsByTagName("input")[1];
+				var f=document.getElementsByTagName("span")[1];
+				var e=c.value;
+				
+				var d=/^.{6,}$/;
+				if(d.test(e)==false){
+					f.innerHTML="密码不能少于6位";
+					y=1;
+					x=1;
+					return;
+				}
+				var g=/^([A-z0-9_]){6,}$/;		//数字、字母、下划线
+				if(g.test(e)==false){
+					f.innerHTML="密码必须由数字、字母组成的不少于6位字符";
+					y=1;
+					x=1;
+					return;
+				}
+				if((g.test(e)==true) && (d.test(e)==true)){
+					c.style.border="solid 1px green";
+					f.innerHTML="";
+					y=0;
+					x=0;
+				}
+			}
+			//第三个input框失去焦点后实现的效果
+			function fn4(){
+				var c=document.getElementsByTagName("input")[1];
+				var t=document.getElementsByTagName("span")[2];
+				var e=c.value;
+				var h=document.getElementsByTagName("input")[2];
+				var w=h.value;
+				if(e==w){
+					h.style.border="solid 1px green";
+					t.innerHTML="";
+					y=0;
+					x=0;
+				}else{
+					t.innerHTML="两次密码不一致";
+					y=1;
+					x=1;
+					return;
+				}
+			}
+			//第四个input框失去焦点后实现的效果
+			function fn5(){
+				var c=document.getElementsByTagName("input")[3];
+				var t=document.getElementsByTagName("span")[3];
+				var e=c.value;
+				var h=/^\w{1,}@\w{1,}\.[A-z]{2,5}$/;	// \w：数字、字母、下划线    	{1,}：1个以上的数字、字母、下划线		
+														//	@:@		\.: 点		[A-z]:大写A到大写Z和小写a到小写z		{2,5}:2到5个字符
+				if(h.test(e)==false){
+					t.innerHTML="邮件格式不正确，如tom@sohu.com";
+					y=1;
+					x=1;
+					return;
+				}
+				if(h.test(e)==true){
+					c.style.border="solid 1px green";
+					t.innerHTML="";
+					y=0;
+					x=0;
+				}
+				
+			}
+
+			//点击提交按钮，提交是否成功
+			function fn6(){
+				var c=document.getElementsByTagName("input");
+				if((y==0)&&(x==0)){
+					for(var i=0;i<c.length;i++){
+						c[i].value="";
+					}
+					alert("提交成功")
+				}
+				if((y==1)&&(x==1)){
+					for(var i=0;i<c.length;i++){
+						c[i].value="";
+					}
+					alert("提交失败")
+				}
+			}
+			//点击重置按钮，清除所有
+			function fn7(){
+				var c=document.getElementsByTagName("input");
+				var e=document.getElementsByTagName("span");
+				if((y==1)&&(x==1)){
+					for(var i=0;i<c.length;i++){
+						c[i].value="";
+					}
+					for(var j=0;j<e.length;j++){
+						e[j].innerHTML="";
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

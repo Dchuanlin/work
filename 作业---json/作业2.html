@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				pardding:0px;
+				margin: 0px;
+				margin: 0 auto;
+				background-image: url(img/tx1.png);
+			}
+			button{
+				width: 100px;
+				height: 30px;
+				margin-left:50px;
+				margin-top: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<button onclick="luck()">点击开始抽奖</button>
+		</div>
+		<script>
+			function luck(){
+				var a=parseInt(10*Math.random());
+				alert(a);
+				if(a==8){
+					document.write("恭喜你抽中一等奖");
+				}
+				else if(a==2||a==6){
+					document.write("恭喜你抽中二等奖");
+				}else{
+					document.write("不好意思，你没有中奖");
+				}
+			}
+			
+		</script>
+	</body>
+</html>

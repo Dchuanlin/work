@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var arr=[9,23,16,7,65,4,5,45];
+			var temp;
+			for(var i=0;i<7;i++){			//比较的次数
+				
+				for(var j=0;j<7;j++){		//前后交换的次数
+					
+					temp=arr[j+1];
+					
+					if(arr[j]>arr[j+1]){	//比较大小	//如果arr[j]>arr[j+1]，那么数组元素就是从大到小排
+														//如果arr[j]<arr[j+1]，那么数组元素就是从小到大排
+						
+						arr[j+1]=arr[j];	//若判断的结果为真，则交换两个变量，若为假，直接进行下次比较
+						arr[j]=temp;		//不断的把最大值往右边挪
+						
+					}
+				}
+			}
+			document.write(arr);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+	</head>
+	<style>
+	/****注意：这里的select标签的宽度一定不能定死，因为select标签里的内容长度会化生变化*******/
+		select{						
+			padding: 0px 10px;
+			height: 25px;
+		}
+	</style>
+	<body>
+		<select class="a">
+			<option>-请选择-</option>
+		</select>
+		<select class="b">
+			<option>-请选择-</option>
+		</select>
+		<select class="c">
+			<option>-请选择-</option>
+		</select>
+		
+		
+		<script>
+			$.ajax({
+				"type":"get",
+				"url":"city.json",
+				"dataType":"json",
+				"success":function(data){
+					var _op="";
+					for(var i=0;i<data.city.length;i++){	//data.city是一个数组(只包含各省、市的数组)
+						_op+="<option class='x'>"+data.city[i].name+"</option>"		//向第一个多选框里添加内容(各省、市)
+						$(".x").remove()		//**重点：清空第i次输入的值  如果没有这一步，那下拉框中的值就会重复,而且当第二次追加值时还会保留第一次追加的值
+						$(".a").append(_op)		//追加值
+					}
+				
+				},
+				"error":function(){
+					alert("1出错!")
+				}
+			});
+			$(".a").change(function(){		//当第一个下拉框中的值发生变化的时候第二个下拉框中的值发生相应的变化
+				$.ajax({
+					"type":"get",
+					"url":"city.json",
+					"dataType":"json",
+					"success":function(data){
+						var _op1=$(".a").val()		//第一个多选框选中的值
+							for(var i=0;i<data.city.length;i++){	//data.city是一个数组(只包含各省、市的数组)
+								if(data.city[i].name==_op1){		//第一个下拉框遍历的值当等于第一个下拉框选中的值时，在第二个下拉框中遍历第一个下拉框选中的值所相对应的值
+									var _op2="";
+									for(var j=0;j<data.city[i].city.length;j++){		//data.city[i].city是一个数组(只包含省市下面的地级市的数组)
+										_op2+="<option class='d'>"+data.city[i].city[j].name+"</option>"		//向第二个多选框里添加内容(各地级市)
+										$(".d").remove()		//**重点：清空第j次输入的值  如果没有这一步，那下拉框中的值就会重复,而且当第二次追加值时还会保留第一次追加的值
+										$(".b").append(_op2)	//追加值
+									}
+								}
+							}
+							
+							
+					},
+					"error":function(){
+						alert("2出错!")
+					}
+				
+				
+				})
+			})
+			
+			$(".b").change(function(){			//当第二个下拉框中的值发生变化的时候第三个下拉框中的值发生相应的变化
+				$.ajax({
+					"type":"get",					//请求的类型	
+					"url":"city.json",				//请求的路径
+					"dataType":"json",				//响应的数据类型
+					"success":function(data){		//请求成功之后的回调函数
+							var _op2=$(".b").val()		//第二个多选框选中的值
+							var _op1=$(".a").val()		//第一个多选框选中的值
+							for(var i=0;i<data.city.length;i++){	//data.city是一个数组(只包含各省、市的数组)
+								if(data.city[i].name==_op1){		//第一个下拉框遍历的值当等于第一个下拉框选中的值时，在第二个下拉框中遍历第一个下拉框选中的值所相对应的值
+									for(var j=0;j<data.city[i].city.length;j++){	//data.city[i].city是一个数组(只包含省市下面的地级市的数组)
+										if(data.city[i].city[j].name==_op2){		//第二个下拉框遍历的值当等于第二个下拉框选中的值时，在第三个下拉框中遍历第二个下拉框选中的值所相对应的值
+											var _op3=""
+											for(var e=0;e<data.city[i].city[j].area.length;e++){	//data.city[i].city[j].area是一个数组(只包含地级市下面的区、县级市的数组)
+												_op3+="<option class='f'>"+data.city[i].city[j].area[e]+"</option>"		//向第三个多选框里添加内容(区、县级市)
+												$(".f").remove()		//**重点：清空第e次输入的值  如果没有这一步，那下拉框中的值就会重复,而且当第二次追加值时还会保留第一次追加的值
+												$(".c").append(_op3)	//追加值
+											}
+										}
+									}
+								}
+							}
+					},
+					"error":function(){		//请求失败之后的回调函数
+						alert("3出错!")
+					}
+				
+				
+				})
+			})
+		</script>
+	</body>
+</html>

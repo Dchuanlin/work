@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+			<lable>用户名：</lable><input onfocus="fn1()" onblur="fn2()" type="text" value="请输入内容"/><span style="display:none;">请输入6-12位</span>
+	</body>
+	<script>
+		function fn1(){
+			var a=document.getElementsByTagName("input")[0];
+			var c=document.getElementsByTagName("span")[0];
+			a.value="";			//a.value=" " 注意：这里的清楚空格也有作用,会影响d的值
+			c.style.display="none";
+		}
+		function fn2(){
+			var a=document.getElementsByTagName("input")[0];
+			var c=document.getElementsByTagName("span")[0];
+			var b=a.value;
+			var d=b.length;
+			if(d<6 || d>12){
+				c.style.display="block";
+				a.style.border="solid 1px red";
+			}else{
+				c.style.display="none";
+				
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.a{
+				width: 990px;
+				height: 1800px;
+				margin: 0 auto;
+			}
+			.b{
+				width: 117px;
+				height: 150px;
+				background-image: url(img/advpic.jpg);
+				background-repeat: no-repeat;
+				position: absolute;
+				margin-top: 120px;
+				top: 0px;
+				left: 20px;
+			}
+			.b img{
+				margin-left: 100px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="a"><img src="img/contentpic.jpg"/></div>
+		<div class="b" ><img onclick=fn1() src="img/close.jpg"/></div>
+		<script type="text/javascript">
+			//1、图标随滚动条的滑动而滑动，看上去就是图标不动
+			window.onscroll=function(){
+				var a=document.body.scrollTop||document.documentElement.scrollTop
+				var b=document.getElementsByClassName("b")[0];
+				b.style.top=a+"px";
+			}
+			//2、关闭图标
+			function fn1(){
+				var c=document.getElementsByClassName("b")[0];
+				c.remove()
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			div{
+				width: 800px;
+				height: 400px;
+				position: relative;
+				margin: 0 auto;
+			}
+			img{
+				width: 250px;
+				height: 200px;
+			}
+			.b{
+				width: 250px;
+				height: 200px;
+				list-style: none;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<ul style="display: block;">
+				<li class="b" ><img onclick="fn1(6)" src="img/1.jpg"/></li>
+				<li class="b" ><img onclick="fn2(7)" src="img/2.jpg"/></li>
+				<li class="b" ><img onclick="fn3(8)" src="img/3.jpg"/></li>
+				<li class="b" ><img onclick="fn4(9)" src="img/4.jpg"/></li>
+				<li class="b" ><img onclick="fn5(10)" src="img/5.jpg"/></li>
+				<li class="b" ><img onclick="fn6(11)" src="img/6.jpg"/></li>
+			</ul>
+			<ul style="display: none;list-style: none;" >
+				<li><img style="float:left;"src="img/1.jpg"/>
+					<span onclick="fn7(1)" style="float:left;background-color: gray;font-size: 25px;cursor: pointer;">X</span>
+				</li>
+			</ul>
+			<ul style="display: none;list-style: none;">
+				<li><img style="float:left;" src="img/2.jpg"/>
+					<span onclick="fn7(2)" style="float:left;background-color: gray;font-size: 25px;cursor: pointer;">X</span>
+				</li>
+			</ul>
+			<ul style="display: none;list-style: none;">
+				<li><img style="float:left;" src="img/3.jpg"/>
+					<span onclick="fn7(3)" style="float:left;background-color: gray;font-size: 25px;cursor: pointer;">X</span>
+				</li>
+			</ul>
+			<ul style="display: none;list-style: none;">
+				<li><img style="float:left;" src="img/4.jpg"/>
+					<span onclick="fn7(4)" style="float:left;background-color: gray;font-size: 25px;cursor: pointer;">X</span>
+				</li>
+			</ul>
+			<ul style="display: none;list-style: none;">
+				<li><img style="float:left;" src="img/5.jpg"/>
+					<span onclick="fn7(5)" style="float:left;background-color: gray;font-size: 25px;cursor: pointer;">X</span>
+				</li>
+			</ul>
+			<ul style="display: none;list-style: none;">
+				<li><img style="float:left;" src="img/6.jpg"/>
+					<span onclick="fn7(6)" style="float:left;background-color: gray;font-size: 25px;cursor: pointer;">X</span>
+				</li>
+			</ul>
+		</div>
+		<script>
+			function fn1(){
+				var a=document.getElementsByTagName("ul")[1];
+				document.getElementsByTagName("ul")[0].style.opacity="0.7";
+				document.getElementsByTagName("ul")[0].style.backgroundColor="black";
+				a.style.display="block";
+				var b=document.getElementsByTagName("img")[6];
+				b.style.width="500px";
+				b.style.height="250px";
+				a.style.position="absolute";
+				a.style.top="50px";
+				a.style.left="150px";
+			}
+			function fn2(){
+				var a=document.getElementsByTagName("ul")[2];
+				document.getElementsByTagName("ul")[0].style.opacity="0.7";
+				document.getElementsByTagName("ul")[0].style.backgroundColor="black";
+				a.style.display="block";
+				var b=document.getElementsByTagName("img")[7];
+				b.style.width="500px";
+				b.style.height="250px";
+				a.style.position="absolute";
+				a.style.top="50px";
+				a.style.left="150px";
+			}
+			function fn3(){
+				var a=document.getElementsByTagName("ul")[3];
+				document.getElementsByTagName("ul")[0].style.opacity="0.7";
+				document.getElementsByTagName("ul")[0].style.backgroundColor="black";
+				a.style.display="block";
+				var b=document.getElementsByTagName("img")[8];
+				b.style.width="500px";
+				b.style.height="250px";
+				a.style.position="absolute";
+				a.style.top="50px";
+				a.style.left="150px";
+			}
+			function fn4(){
+				var a=document.getElementsByTagName("ul")[4];
+				document.getElementsByTagName("ul")[0].style.opacity="0.7";
+				document.getElementsByTagName("ul")[0].style.backgroundColor="black";
+				a.style.display="block";
+				var b=document.getElementsByTagName("img")[9];
+				b.style.width="500px";
+				b.style.height="250px";
+				a.style.position="absolute";
+				a.style.top="50px";
+				a.style.left="150px";
+			}
+			function fn5(){
+				var a=document.getElementsByTagName("ul")[5];
+				document.getElementsByTagName("ul")[0].style.opacity="0.7";
+				document.getElementsByTagName("ul")[0].style.backgroundColor="black";
+				a.style.display="block";
+				var b=document.getElementsByTagName("img")[10];
+				b.style.width="500px";
+				b.style.height="250px";
+				a.style.position="absolute";
+				a.style.top="50px";
+				a.style.left="150px";
+			}
+			function fn6(){
+				var a=document.getElementsByTagName("ul")[6];
+				document.getElementsByTagName("ul")[0].style.opacity="0.7";
+				document.getElementsByTagName("ul")[0].style.backgroundColor="black";
+				a.style.display="block";
+				var b=document.getElementsByTagName("img")[11];
+				b.style.width="500px";
+				b.style.height="250px";
+				a.style.position="absolute";
+				a.style.top="50px";
+				a.style.left="150px";
+			}
+			function fn7(e){
+				var a=document.getElementsByTagName("ul")[e];
+				a.style.display="none";
+				document.getElementsByTagName("ul")[0].style.opacity="1";
+			}
+		</script>
+	</body>
+</html>

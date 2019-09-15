@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	
+	</head>
+	<body>
+		<div>
+			<button onclick="fn1()">新增</button>
+			<ul>
+				
+			</ul>
+		</div>
+	</body>
+	<script>
+		function fn1(){
+			var a=document.getElementsByTagName("ul")[0];
+			var b=document.createElement("li");
+			a.appendChild(b);
+			var c=document.createElement("input");
+			b.appendChild(c);
+			c.placeholder="请输入内容"
+		}
+	</script>
+</html>

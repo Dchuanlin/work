@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="fn1()" style="float:left">发送</button>		
+		<div style="float: left;"></div>
+		<!--<script>
+			//方法一（不推荐）
+			//1、当点击发送按钮时，按钮变为灰色状态（不能再点击） 并且显示出5s倒计时秒数的时间
+			//2、当 5 秒倒计时完成后，“5 秒之后获取验证码”文字变为“重获验证码”，并且灰色发送按钮变为可点击状态
+			//3、当再次点击发送按钮时，再回到 1 步骤，依次类推。。。。
+			//获取按钮
+			var a=document.getElementsByTagName("div")[0];		//获取div标签
+			var b=document.getElementsByTagName("button")[0];	//获取button标签
+			function fn1(){
+				//当点击发送按钮时，按钮变为灰色状态（不能再点击） 并且显示出倒计时秒数的时间
+				//1.当点击发送按钮时，按钮变为灰色状态（不能再点击）
+				b.disabled=true;			//按钮变为灰色，即不可点击状态可使用 JS 代码：button.disabled=true;
+											
+				var i=5;		//变量赋值
+				var m=setInterval(fn2,1000);		//1秒钟触发fn2事件，并且储存这个值
+				function fn2(){
+					//每秒都改变div 里面的内容
+					a.innerHTML=(i--)+"秒后获取验证码";
+					if(i<0){		//五秒后 停止计时器  文字变成重获验证码 并对i重新赋值
+						clearInterval(m);
+						a.innerHTML="重新获取验证码";
+						i=5;
+					}
+					if(i==5){			//如果等于就使按钮可以重新点击
+						b.disabled=false;		//按钮变为可点击状态可使用 JS 代码：button.disabled=false;
+					}
+				}
+			}
+		</script>-->
+		<script>
+			//方法二(推荐这种)
+			//1、当点击发送按钮时，按钮变为灰色状态（不能再点击） 并且显示出5s倒计时秒数的时间
+			//2、当 5 秒倒计时完成后，“5 秒之后获取验证码”文字变为“重获验证码”，并且灰色发送按钮变为可点击状态
+			//3、当再次点击发送按钮时，再回到 1 步骤，依次类推。。。。
+			//获取按钮
+			var a=document.getElementsByTagName("div")[0];		//获取div标签
+			var b=document.getElementsByTagName("button")[0];	//获取button标签
+			//1、当点击发送按钮时，按钮变为灰色状态（不能再点击） 并且显示出5s倒计时秒数的时间
+			function fn1(){
+				b.disabled=true;
+				var num=5;
+				var d=setInterval(function(){
+					num--;
+					a.innerHTML=num+"秒后获取验证码";
+					//2、当 5 秒倒计时完成后，“5 秒之后获取验证码”文字变为“重获验证码”，并且灰色发送按钮变为可点击状态
+					if(num==0){
+						b.disabled=false;
+						a.innerHTML="重新获取验证码";
+						clearInterval(d);
+					}
+				},1000)
+			}
+		</script>
+	</body>
+	
+	
+	
+</html>

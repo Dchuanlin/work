@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+		<style>
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			div{
+				width: 500px;
+				height: 500px;
+				margin:0 auto;
+			}
+			textarea{
+				width: 500px;
+				height: 400px;
+			}
+			button{
+				width: 60px;
+				height: 30px;
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h3>请在下面的框中填写邮件</h3>
+			<textarea></textarea><br/>
+			<button>发送</button>
+		</div>
+		<script>
+			
+			//每隔1分钟将多行文本里的内容输送给本地存储
+			setInterval(function(){
+				var a=$("textarea").val()
+				window.localStorage.setItem("xinxi",a)
+			},60000)
+			//页面一加载，本地存储的内容就直接赋值给多行文本
+			window.onload=function(){
+				$("textarea").val(window.localStorage.getItem("xinxi"))
+			}
+			//点击发送按钮，清空多行文本里的内容
+			$("button").click(function(){
+				$("textarea").val("")
+			})
+				
+			
+		</script>
+	</body>
+</html>

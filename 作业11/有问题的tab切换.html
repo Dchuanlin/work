@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.container{
+				width: 195px;
+				height: 280px;
+				border: solid 1px red;
+				border-radius: 5px;
+				margin: 0 auto;
+			}
+			ul{
+				list-style: none;
+				margin-left: -20px;
+			}
+			li{
+				margin-top: 5px;
+			}
+			.e{
+				margin-left: 19px;
+			}
+			.a{
+				color: red;
+				font-weight: 700;
+			}
+			.b{
+				font-size: 12px;
+				margin-left: 10px;
+				color: red;
+			}
+			.c{
+				font-size: 14px;
+				margin-left: 19px;
+				margin-top: 3px;
+				color: red;
+			}
+			.d{
+				margin-left: 19px;
+				margin-top: 3px;
+				font-size: 15px;
+			}
+			.f,.h{
+				background-color: indianred;
+				display: inline-block;
+				width: 50px;
+				height: 25px;
+				line-height: 25px;
+				text-align: center;
+				margin-left: 2px;
+				border-radius: 3px;
+				cursor: pointer;
+			}
+			.g{
+				background-color: indianred;
+				display: inline-block;
+				width: 50px;
+				height: 25px;
+				line-height: 25px;
+				text-align: center;
+				margin-left: 2px;
+				border-radius: 3px;
+				cursor: pointer;
+			}
+			li{
+				font-size: 14px;
+				color: cornflowerblue;
+			}
+		
+		</style>
+		<title></title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="e"><span class="a">图书周排行榜</span><span class="b">TOP 100</span></div>
+			<div class="c">近七天销量，每日更新</div>
+			<div class="d">
+				<span onmouseover="fn1()" class="f" style="background-color: blue;">小说</span>
+				<span class="g" onmouseover="fn2()">非小说</span>
+				<span class="h" onmouseover="fn3()">少儿</span>
+			</div>
+			<div style="display: block;">
+				<ul>
+					<li>1、时间旅行者的妻子</li>
+					<li>2、女心理师（下）</li>
+					<li>3、鬼吹灯之精绝古城</li>
+					<li>4、女心理师（上）</li>
+					<li>5、小时候</li>
+					<li>6、追风筝的人</li>
+					<li>7、盗墓笔记2</li>
+					<li>8、输赢</li>
+				</ul>
+			</div>
+			<div style="display: none;">
+				<ul>
+					<li>1、人生若只如初见</li>
+					<li>2、高效能人士的七个</li>
+					<li>3、求医不如求己</li>
+					<li>4、人体使用手册</li>
+					<li>5、孩子，把你的手给我</li>
+					<li>6、别笑，我是英文单词书</li>
+					<li>7、人体经络使用手册</li>
+					<li>8、股市稳赚</li>
+				</ul>
+			</div>
+			<div style="display: none;">
+				<ul>
+					<li>1、时间旅行者的妻子</li>
+					<li>2、女心理师（下）</li>
+					<li>3、鬼吹灯之精绝古城</li>
+					<li>4、女心理师（上）</li>
+					<li>5、小时候</li>
+					<li>6、追风筝的人</li>
+					<li>7、盗墓笔记2</li>
+					<li>8、输赢</li>
+				</ul>
+			</div>
+		</div>
+		<script>
+			//需求说明：制作如下图示的 Tab 切换效果,当鼠标指针放在“小说”、“非小说”
+			//或“少儿”上时，标题背景改变为另外一个图片，鼠标指针变为手状，并且下面
+			//的的图书标题变为对应类别下的标题。
+			var a=document.getElementsByTagName("div")[4];
+			var b=document.getElementsByTagName("div")[5];
+			var c=document.getElementsByTagName("div")[6];
+			var d=document.getElementsByClassName("f")[0];
+			var e=document.getElementsByClassName("g")[0];
+			var f=document.getElementsByClassName("h")[0];
+			
+			function fn1(){
+				a.setAttribute("display","block");	//只显示a这个div块
+				b.setAttribute("display","none");
+				c.setAttribute("display","none");
+				d.style.backgroundColor="blue";			//只改变d这个span的背景颜色
+				e.style.backgroundColor="indianred";
+				f.style.backgroundColor="indianred";
+				
+			}
+			function fn2(){
+				b.setAttribute("display","block");	//只显示b这个div块
+				a.removeAttribute("display");
+				c.removeAttribute("display");
+				e.style.backgroundColor="blue";		//只改变e这个span的背景颜色
+				d.style.backgroundColor="indianred";
+				f.style.backgroundColor="indianred";
+				
+			}
+			function fn3(){
+				c.setAttribute("display","block");	//只显示c这个div块
+				a.removeAttribute("display");
+				b.removeAttribute("display");
+				f.style.backgroundColor="blue";		//只改变f这个span的背景颜色
+				e.style.backgroundColor="indianred";
+				d.style.backgroundColor="indianred";
+				
+			}
+		</script>
+	</body>
+</html>

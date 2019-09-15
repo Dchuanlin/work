@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.a{
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				background-color: red;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+			.a:hover{
+				cursor: all-scroll;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="a"></div>
+		<script>
+			//1、鼠标按下时激活div块随鼠标移动而移动
+			document.onmousedown=function fn0(){
+				document.onmousemove= function fn1(e){
+					var a=document.getElementsByClassName("a")[0];
+					var y=e||event;
+					a.style.top=(y.clientY-20)+"px";
+					a.style.left=(y.clientX-20)+"px";
+				}
+			}
+			//2、鼠标松开时清除div块随鼠标移动而移动
+			document.onmouseup=function fn2(){
+				document.onmousemove=null;			//重点：此处null可以应用于其他事件函数
+			}
+		</script>
+	</body>
+</html>
